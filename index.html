@@ -3,34 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Automator - Official Developer Site</title>
+    <title>Business Automator | Official Developer Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
-        .button { background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-        footer { margin-top: 50px; font-size: 0.8em; border-top: 1px solid #eee; padding-top: 20px; }
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ededed; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .glow-text { text-shadow: 0 0 20px rgba(255,255,255,0.2); }
+        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body>
+<body class="pt-20">
 
-    <h1>Business Automator</h1>
-    <p>Welcome to the official developer portal for Business Automator Android applications.</p>
-    
-    <p>Our main platform and services are hosted at our primary web address:</p>
-    
-    <p>
-        <a href="https://businessautomator.onrender.com/" class="button">Visit Business Automator Main Site</a>
-    </p>
+    <nav class="fixed top-0 w-full z-50 glass-card px-6 py-4 flex justify-between items-center">
+        <div class="font-serif text-xl italic font-light tracking-wider">Business Automator</div>
+        <div class="space-x-6 text-sm uppercase tracking-widest text-gray-400">
+            <a href="https://businessautomator.onrender.com/" class="hover:text-white transition">Main Platform</a>
+        </div>
+    </nav>
 
-    <hr>
+    <main class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <p class="text-blue-500 text-xs tracking-[0.3em] uppercase mb-6">Official Developer Portal</p>
+        <h1 class="font-serif text-5xl md:text-7xl italic font-light glow-text mb-8">Let's cut your costs</h1>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto mb-12">
+            Tell us about your biggest operational challenges and we'll show you exactly how automation can save you time and money.
+        </p>
 
-    <h3>Support & Legal</h3>
-    <ul>
-        <li>Email: support@yourdomain.com (Update this)</li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-    </ul>
+        <div id="contact-form" class="glass-card p-8 rounded-2xl text-left max-w-lg mx-auto">
+            <form onsubmit="event.preventDefault(); document.getElementById('contact-form').innerHTML = '<h2 class=\'text-2xl text-center py-10\'>Success! We will contact you soon.</h2>';">
+                <div class="mb-4">
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Name</label>
+                    <input type="text" required class="w-full bg-transparent border border-gray-800 p-3 rounded focus:border-blue-500 outline-none transition">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Email</label>
+                    <input type="email" required class="w-full bg-transparent border border-gray-800 p-3 rounded focus:border-blue-500 outline-none transition">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Message</label>
+                    <textarea required class="w-full bg-transparent border border-gray-800 p-3 rounded h-32 focus:border-blue-500 outline-none transition"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-black py-4 rounded font-semibold hover:bg-gray-200 transition uppercase tracking-widest text-xs">Submit Query</button>
+            </form>
+        </div>
+    </main>
 
-    <footer>
-        &copy; 2026 Business Automator. All rights reserved.
+    <footer class="border-t border-gray-900 py-12 px-6 text-center text-sm text-gray-500">
+        <p class="mb-4">&copy; 2026 Business Automator. All Rights Reserved.</p>
+        <div class="space-x-4">
+            <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-white">Terms & Conditions</a>
+        </div>
     </footer>
 
 </body>
